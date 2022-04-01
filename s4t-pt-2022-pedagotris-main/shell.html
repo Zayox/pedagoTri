@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>PedagoTris</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./img/dlpng_com_PNG_Domino_Transparent_Domino_PNG_Images____PlusPNG_6970352.png">
+</head>
+
+
+<body class="bg-[#012A47] overflow-y-hidden">
+
+<h1 class="text-white text-7xl absolute 2xl:left-[40vw] lg:left-[31vw] md:left-[30vw] top-[7vh]">TRI DE SHELL</h1>
+
+<div class="mt-8 ml-8 hover:cursor-pointer z-[2] absolute" id="burger-menu">
+    <div class="h-[5px] bg-white w-[30px] rounded-sm"></div>
+    <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+    <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+</div>
+
+<div class="h-[100vh] lg:w-[10vw] w-[14vw] bg-blue-400 absolute top-0 pt-24 pl-4 duration-1000 left-[-20vw]" id="sideBar">
+    <ul class="text-white lg:text-2xl">
+        <a href="bubble.html">
+            <li class="mt-6 hover:text-sky-800">Tri à bulle</li>
+        </a>
+        <a href="select.html">
+            <li class="mt-6 hover:text-sky-800">Tri par sélection</li>
+        </a>
+        <a href="index.html">
+            <li class="mt-6 hover:text-sky-800">Accueil</li>
+        </a>
+    </ul>
+</div>
+
+<div class="lg:h-16 lg:w-16 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-4 lg:pl-5 pt-8 pl-10 absolute left-[20vw] top-[35vh]" id="12">12</div>
+<div class="lg:h-16 lg:w-16 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-4 lg:pl-5 pt-8 pl-10 absolute left-[50vw] top-[35vh]" id="2">2</div>
+<div class="lg:h-16 lg:w-16 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-4 lg:pl-5 pt-8 pl-10 absolute left-[40vw] top-[35vh]" id="54">54</div>
+<div class="lg:h-16 lg:w-16 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-4 lg:pl-5 pt-8 pl-10 absolute left-[30vw] top-[35vh]" id="34">34</div>
+<div class="lg:h-16 lg:w-16 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-4 lg:pl-5 pt-8 pl-10 absolute left-[60vw] top-[35vh]" id="3">3</div>
+
+<p class="absolute top-[68vh] ml-16 text-white hidden" id="explanation">Voici un test de texte à mettre skjghfdshjf</p>
+
+<div class="absolute top-[20vh] left-[60vw]">
+    <form class="flex flex-col w-52">
+        <select class="h-14 text-gray-400 rounded-md outline-none text-center" id="selector" onChange="mode()">
+            <option value="Temps réel">Temps réel</option>
+            <option value="Pas à pas">Pas à pas</option>
+            <option value="x2">Rapide</option>
+        </select>
+    </form>
+</div>
+
+
+
+<div class="absolute top-[20vh] left-[80vw]">
+    <form name="myform" class="flex flex-col w-32">
+        <select name="mylist" onChange="code()" class="h-14 text-gray-400 rounded-md outline-none text-center" id="selector2" >
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+        </select>
+    </form>
+</div>
+
+
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[70vw] top-[60vh] hidden" id="nextBtn">Suivant</button>
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[40vw] lg:top-[4vh] md:top-[55vh] top-[55vh]" id="playBtn"><img src="./images/play-button-28245.png" alt="play logo" id="playBtnImg" class="h-10"></button>
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[50vw] top-[5vh]" id="resetBtn">Redémarrer</button>
+
+<div class="absolute lg:top-[30vh] lg:left-[78vw] top-[65vh] left-[55vw] pb-36" id="javaCode">
+    <div class="h-90 w-90 border-4 px-2 border-white border-double rounded bg-[#012A47] flex justify-center">
+        <p class="text-white">
+            public void sort(int arrayToSort[]) {<br>ㅤint n = arrayToSort.length;<br>
+            <span id="firstFor">ㅤfor (int gap = n / 2; gap > 0; gap /= 2) {</span><br>
+            <span id="secondFor">ㅤㅤfor (int i = gap; i < n; i++) {</span><br>ㅤㅤㅤint key = arrayToSort[i];<br>ㅤㅤㅤint j = i;<br>
+            <span id="ifCondition">ㅤㅤㅤwhile (j >= gap && arrayToSort[j - gap] > key) {</span><br>ㅤㅤㅤㅤarrayToSort[j] = arrayToSort[j - gap];<br>ㅤㅤㅤㅤj -= gap;
+            <br>ㅤㅤㅤ}
+            <br>ㅤㅤㅤarrayToSort[j] = key;
+            <br>ㅤㅤ}
+            <br>ㅤ}
+            <br>}
+            <br>
+        </p>
+    </div>
+</div>
+
+<div class="absolute lg:top-[30vh] lg:left-[78vw] top-[67vh] left-[55vw] pb-36 opacity-0" id="c#Code">
+    <div class="h-90 w-90 pl-1 px-2 border-4 border-white border-double rounded bg-[#012A47] flex justify-center">
+        <p class="text-white">
+            public void shellSort(int[] arr, int n) {<br>ㅤint i, j, pos, temp;<br>ㅤpos = 3;<br>
+            <span id="firstFor2">ㅤwhile (pos > 0) {</span><br>
+            <span id="secondFor2">ㅤㅤfor (i = 0; i < n; i++) {</span><br>ㅤㅤㅤj = i;<br>ㅤㅤㅤtemp = arr[i];<br>
+            <span>ㅤㅤㅤwhile ((j >= pos) && (arr[j - pos] > temp)) {</span><br>ㅤㅤㅤㅤarr[j] = arr[j - pos];<br>ㅤㅤㅤㅤj = j - pos;
+            <br>ㅤㅤㅤ}
+            <br>ㅤㅤㅤarr[j] = temp;
+            <br>ㅤㅤ}<br>
+            <span id="ifConfition2">ㅤㅤif (pos / 2 != 0) {</span><br>ㅤㅤㅤpos = pos / 2;<br>
+            <span>ㅤㅤ} else if (pos == 1) {</span><br>ㅤㅤㅤㅤpos = 0;<br>
+            <span>ㅤㅤ} else {</span><br>ㅤㅤㅤpos = 1;
+            <br> ㅤㅤ}
+            <br>ㅤ}
+            <br>}
+            <br>
+        </p>
+    </div>
+</div>
+<p class="bg-sky-100 text-justify opacity-60 space-y-[10px] absolute top-[80vh] left-[5vh] w-1/2 border-4 border-white rounded-md px-2 py-2">
+    <span class="font-bold text-xl text-[#012a47]">Explications :</span><br>
+    ShellSort est principalement une variante de Insertion Sort. 
+    L'idée de shellSort est de permettre l'échange d'éléments lointains. 
+    Dans shellSort, nous rendons le tableau h-trié pour une grande valeur de h. 
+    Nous continuons à réduire la valeur de h jusqu'à ce qu'elle devienne 1. Un tableau est dit h-trié si toutes les sous-listes de chaque h'ième élément sont triées.
+    <br><span class="italic">Source : https://www.geeksforgeeks.org/shellsort/ </span></br>
+</p>
+<script src="js/shell.js"></script>
+
+</body>
+
+</html>
